@@ -12,7 +12,7 @@ public abstract class AbstractHandler<T> {
 
     private AbstractHandler<T> next;
 
-    public boolean process(T value){
+    boolean process(T value){
         return processToImpl(value) || hasNext() && next.process(value);
     }
 

@@ -7,9 +7,10 @@ import java.util.stream.Stream;
  */
 @FunctionalInterface
 public interface TryExecute {
+
     void execute();
 
-    static void combine(TryExecute...tryExecutes){
+    static void combine(TryExecute... tryExecutes){
         Stream.of(tryExecutes).forEach(TryExecute::execute);
     }
 }

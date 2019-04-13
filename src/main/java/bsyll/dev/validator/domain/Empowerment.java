@@ -8,38 +8,31 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public enum Empowerment {
 
-    ANNONYMOUS("", 1) {
+    ANONYMOUS() {
         @Override
         public void execute(Object value) {
-            log.info("process value {} for {} user ...", value.toString(), ANNONYMOUS.name());
+            log.info("process value {} for {} user ...", value.toString(), ANONYMOUS.name());
         }
     },
-    USER_L1("", 1) {
+    USER_LEVEL1() {
         @Override
         public void execute(Object value) {
-            log.info("process value {} for {} user ...", value.toString(), USER_L1.name());
+            log.info("process value {} for user {}", value.toString(), USER_LEVEL1.name());
         }
     },
-    USER_L2("", 1) {
+    USER_LEVEL2() {
         @Override
         public void execute(Object value) {
-            log.info("process value {} for {} user ...", value.toString(), USER_L2.name());
+            log.info("process value {} for user {}", value.toString(), USER_LEVEL2.name());
         }
     },
-    ROOT("", 1) {
+    ROOT() {
         @Override
         public void execute(Object value) {
-            log.info("process value {} for {} user ...", value.toString(), ROOT.name());
+            log.info("process value {} for user {}", value.toString(), ROOT.name());
         }
     };
 
-    private String desc;
-    private int weight;
-
-    Empowerment(String desc, int weight){
-        String desc1 = desc;
-        this.weight = weight;
-    }
 
     public abstract <T> void execute(T value);
 

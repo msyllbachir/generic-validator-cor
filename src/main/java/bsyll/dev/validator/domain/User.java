@@ -12,4 +12,5 @@ public class User<T> {
     private Identity identity;
     private Empowerment empowerment ;
     private T valueToExecute;
+    // private final
 }
